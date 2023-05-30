@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "types": ["vite/client", "vite-plugin-svg-icons/client", "jest"],
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "src/enums/*.ts",
+    "mock/**/*.ts",
+    "build/**/*.d.ts",
+    "vite.config.ts",
+    "package.json"
+  ]
+}
