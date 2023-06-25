@@ -4,6 +4,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "es2022",
     "skipLibCheck": true,
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "node",
@@ -18,17 +19,22 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
 
     /* types*/
-    "baseUrl": ".",
-    "types": ["vite/client", "vite-plugin-svg-icons/client", "jest"],
+    "baseUrl": "./",
+    "types": ["vite/client", "vite-plugin-svg-icons/client", "vitest"],
     "typeRoots": ["./node_modules/@types/", "./types"],
     "paths": {
+      "@": ["src"],
       "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
       "/#/*": ["types/*"]
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "types/**/*.d.ts"],
+  "include": ["src","src/**/*.ts", "types/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

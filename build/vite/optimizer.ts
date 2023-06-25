@@ -1,4 +1,5 @@
 // TODO
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import type { GetManualChunk } from 'rollup';
 
@@ -9,7 +10,7 @@ const vendorLibs: { match: string[]; output: string }[] = [
   // },
 ];
 
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 export const configManualChunk: GetManualChunk = (id: string) => {
   if (/[\\/]node_modules[\\/]/.test(id)) {
     const matchItem = vendorLibs.find((item) => {

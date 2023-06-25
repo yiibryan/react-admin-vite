@@ -1,0 +1,92 @@
+.top-bar{
+  margin-bottom: 10px;
+}
+.fluid-list{
+  margin: 0;
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+
+  >li{
+    margin: 0;
+    background-color: #f20;
+    color: #fff;
+    font-size: 48px;
+
+    >.scale{
+      height: 0;
+      padding-bottom: 56.25%;
+      position: relative;
+
+      .item{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+
+    &:nth-child(2n){
+      background-color: #2f5de8;
+    }
+
+    &:nth-child(3n){
+      background-color: #09DFC0;
+    }
+
+    /*一张*/
+    &:only-child{
+      width: 100%;
+    }
+
+    /*两张*/
+    &:first-child:nth-last-child(2),
+    &:nth-child(2):nth-last-child(1){
+      flex: 1;
+    }
+    &:nth-child(2):nth-last-child(1){
+      margin-left: 3px;
+    }
+
+    /*三张*/
+    &:first-child:nth-last-child(3),
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):nth-last-child(1){
+      flex: 1;
+    }
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):nth-last-child(1){
+      margin-left: 3px;
+    }
+
+    /*四张*/
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ li {
+      width: calc(50% - 3px);
+    }
+    &:nth-child(2):nth-last-child(3),
+    &:nth-child(4):nth-last-child(1){
+      margin-left: 3px;
+    }
+    &:nth-child(2):nth-last-child(3) ~li{
+      margin-top: 3px;
+    }
+
+    /*四张以上*/
+    &:first-child:nth-last-child(n+5),
+    &:first-child:nth-last-child(n+5) ~ li {
+      width: calc(33.3333333% - 3px);
+    }
+    &:nth-child(3n-1),
+    &:nth-child(3n){
+      margin-left: 3px;
+    }
+    &:nth-child(3):nth-last-child(2){
+      margin-left: 0;
+    }
+    &:nth-child(3) ~li{
+      margin-top: 3px;
+    }
+
+  }
+}

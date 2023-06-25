@@ -1,11 +1,4 @@
-import type {
-  ComponentRenderProxy,
-  VNode,
-  VNodeChild,
-  ComponentPublicInstance,
-  FunctionalComponent,
-  PropType as VuePropType,
-} from 'vue';
+export {};
 
 declare global {
   const __APP_INFO__: {
@@ -94,8 +87,9 @@ declare global {
   }
 }
 
-declare module 'vue' {
-  export type JSXComponent<Props = any> =
-    | { new (): ComponentPublicInstance<Props> }
-    | FunctionalComponent<Props>;
+declare module '*.svg' {
+  import React = require('react')
+  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>
+  const src: string
+  export default src
 }

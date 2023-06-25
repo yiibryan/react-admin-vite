@@ -2,12 +2,120 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title><%- title %></title>
+    <style>
+      #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        font-size: 100px;
+        background: #01A2F6;
+      }
+      #loader-wrapper .spin-wrapper {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 160px;
+        height: 160px;
+        margin: -100px 0 0 -80px;
+        text-align: center;
+      }
+      #loader-wrapper .spin-wrapper .load-text {
+        font-size: 14px;
+        color: #fff;
+        opacity: 0.5;
+      }
+      #loader-wrapper .ant-spin-dot {
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+      }
+      #loader-wrapper .ant-spin-dot-spin {
+        transform: rotate(45deg);
+        -webkit-animation: antRotate 1.2s linear infinite;
+        animation: antRotate 1.2s linear infinite;
+      }
+      #loader-wrapper .ant-spin-dot-item {
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: #ffffff;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        -webkit-animation: antSpinMove 1s linear infinite alternate;
+        animation: antSpinMove 1s linear infinite alternate;
+      }
+      #loader-wrapper .ant-spin-dot .ant-spin-dot-item:first-child {
+        top: 0;
+        left: 0;
+      }
+      #loader-wrapper .ant-spin-dot .ant-spin-dot-item:nth-child(2) {
+        top: 0;
+        right: 0;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+      #loader-wrapper .ant-spin-dot .ant-spin-dot-item:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+      #loader-wrapper .ant-spin-dot .ant-spin-dot-item:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+      @-webkit-keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes antRotate {
+        to {
+          transform: rotate(405deg);
+        }
+      }
+      @keyframes antRotate {
+        to {
+          transform: rotate(405deg);
+        }
+      }
+
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="application">
+      <div id="loader-wrapper">
+        <div class="spin-wrapper">
+            <span class="ant-spin-dot ant-spin-dot-spin">
+              <i class="ant-spin-dot-item"></i>
+              <i class="ant-spin-dot-item"></i>
+              <i class="ant-spin-dot-item"></i>
+              <i class="ant-spin-dot-item"></i>
+            </span>
+          <div class="load-text">正在加载, 请耐心等待</div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

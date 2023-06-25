@@ -46,21 +46,13 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
       },
     },
     resolve: {
-      alias: [
-        {
-          find: /@\//,
-          replacement: pathResolve('src') + '/',
-        },
-        // /#/xxxx => types/xxxx
-        {
-          find: /\/#\//,
-          replacement: pathResolve('types') + '/',
-        },
-        /*{
-          find: '@okta/okta-auth-js',
-          replacement: '@okta/okta-auth-js/dist/okta-auth-js.umd.js',
-        }*/
-      ]
+      alias: {
+        '@': pathResolve('src'),
+        '@utils': pathResolve('src/utils'),
+        '@assets': pathResolve('src/assets'),
+        '@components': pathResolve('src/components'),
+        "/#": pathResolve('types')
+      }
     },
     build: {
       target: 'es2015',

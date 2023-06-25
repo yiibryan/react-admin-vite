@@ -1,0 +1,57 @@
+export const carRouter = [
+  {
+    "translation": null,
+    "menuId": "4183b61b5f1911ebb98c0242ac11001f",
+    "menuName": "汽车",
+    "menuIcon": "CarOutlined",
+    "menuType": "00015",
+    "remark": "汽车",
+    "redirect": null,
+    "order": 5.5,
+    "fold": null,
+    "hidden": false,
+    "subMenu": [
+      {
+        "translation": null,
+        "menuId": "418421325f1911ebb98c0242ac110010",
+        "menuName": "汽车1",
+        "menuIcon": null,
+        "menuType": "00018",
+        "remark": "汽车1",
+        "redirect": null,
+        "order": 1,
+        "fold": null,
+        "hidden": false,
+        "subMenu": null,
+        "columns": null,
+        "inputs": null,
+        "reMethod": null,
+        "menuUrl": "/car/car-1",
+        "reComponent": "pages/Tools/ThreeAdvance/Car1"
+      },
+      {
+        "translation": null,
+        "menuId": "418421325f1911ebb98c0242ac110010",
+        "menuName": "汽车2",
+        "menuIcon": null,
+        "menuType": "00018",
+        "remark": "汽车2",
+        "redirect": null,
+        "order": 2,
+        "fold": null,
+        "hidden": false,
+        "subMenu": null,
+        "columns": null,
+        "inputs": null,
+        "reMethod": null,
+        "menuUrl": "/car/car-2",
+        "reComponent": "pages/Tools/ThreeAdvance/Car2"
+      },
+    ],
+    "columns": null,
+    "inputs": null,
+    "reMethod": null,
+    "menuUrl": "/car",
+    "reComponent": "layouts/BlankLayout"
+  }
+]

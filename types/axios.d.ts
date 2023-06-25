@@ -32,6 +32,13 @@ export interface Result<T = any> {
   result: T;
 }
 
+export interface Response<T = any> {
+  success: boolean;
+  type: 'success' | 'error' | 'warning';
+  msg: string;
+  data: T;
+}
+
 // multipart/form-data: upload file
 export interface UploadFileParams {
   // Other parameters

@@ -12,5 +12,22 @@ export function configSvgIconsPlugin(isBuild: boolean) {
     svgoOptions: isBuild,
     // default
     symbolId: 'icon-[dir]-[name]',
+    /**
+     * custom insert position
+     * @default: body-last
+     */
+    // inject: 'body-first',//'body-last' | 'body-first',
+
+    /**
+     * custom dom id
+     * @default: __svg__icons__dom__
+     */
+    customDomId: '__svg__icons__dom__',
   });
 }
+
+
+/*
+* vite-plugin-svgr
+* import { ReactComponent as Logo } from "./logo.svg";
+* */

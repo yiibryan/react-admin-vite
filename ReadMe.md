@@ -5,3 +5,7 @@
 * @originjs/vite-plugin-federation
 * [@tanstack/react-table](https://tanstack.com/table)
 * react-table-sticky used for @tanstack/react-table
+* fabric.js canvas => svg
+* vite-plugin-chunk-split
+* TanStack Table(react-table)  https://tanstack.com/
+* react router  https://reactrouter.com/en/main/hooks/use-navigate
